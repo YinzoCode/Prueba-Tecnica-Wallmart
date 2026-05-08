@@ -1,4 +1,4 @@
-# 🎭 Automation Framework — Playwright + Cucumber + Java
+# Automation Framework — Playwright + Cucumber + Java
 
 Proyecto de automatización de pruebas funcionales construido con **Playwright**, **Cucumber (Gherkin)** y **Java**, aplicando buenas prácticas de la industria como Page Object Model (POM), inyección de dependencias y reutilización de clases.
 
@@ -18,9 +18,9 @@ Proyecto de automatización de pruebas funcionales construido con **Playwright**
 
 ---
 
-## ✅ Buenas prácticas aplicadas
+## Buenas prácticas aplicadas
 
-### 🏗️ Page Object Model (POM)
+###  Page Object Model (POM)
 Cada página web tiene su propia clase Java que centraliza todos los selectores y acciones. Los Steps nunca interactúan directamente con el DOM — solo llaman métodos de las Pages.
 
 ```
@@ -30,27 +30,27 @@ pages/
 └── ShoppingCartPage.java ← selectores y acciones del carrito
 ```
 
-### 💉 Inyección de dependencias con PicoContainer
+### Inyección de dependencias con PicoContainer
 En lugar de herencia (prohibida por Cucumber para clases con hooks), se usa `BrowserContext` como clase compartida inyectada automáticamente por PicoContainer en cada clase de Steps. Esto garantiza que todas las clases compartan la misma instancia del navegador sin duplicar código.
 
-### ♻️ Reutilización de Steps
+### Reutilización de Steps
 Steps genéricos como `"the user clicks on {string}"` son compartidos entre múltiples features usando un `switch` que delega a la Page correcta. Esto evita duplicación de código.
 
-### 📋 Background para pasos comunes
+### Background para pasos comunes
 Los pasos que se repiten en todos los escenarios de un feature (como navegación inicial o login) se centralizan en un `Background`, ejecutándose automáticamente antes de cada escenario.
 
-### 🏷️ Tags para filtrado de ejecución
+###  Tags para filtrado de ejecución
 Cada escenario tiene tags (`@loginSuccessfully`, `@loginFailed`, `@addToCart`) que permiten ejecutar subconjuntos específicos de pruebas sin modificar código.
 
-### 📊 DataTable para datos estructurados
+###  DataTable para datos estructurados
 Los datos de formularios y cantidades se pasan desde el `.feature` usando tablas de Cucumber, manteniendo los datos en Gherkin y la lógica en Java.
 
-### 🔒 Locators robustos
+###  Locators robustos
 Se evitan selectores frágiles como XPath absolutos o IDs dinámicos. Se usan atributos estables (`data-original-title`, `name^=`, clases CSS) combinados con `.nth()` de Playwright para selección por posición.
 
 ---
 
-## 📁 Estructura del proyecto
+##  Estructura del proyecto
 
 ```
 mi-proyecto-playwright/
@@ -88,7 +88,7 @@ mi-proyecto-playwright/
 
 ---
 
-## ⚙️ Requisitos previos
+## Requisitos previos
 
 ### 1. Java JDK 17+
 Descarga desde: https://adoptium.net
@@ -120,7 +120,7 @@ Extensiones requeridas:
 
 ---
 
-## 🚀 Instalación y ejecución
+##  Instalación y ejecución
 
 ### 1. Clonar el repositorio
 ```bash
@@ -158,7 +158,7 @@ mvn clean test -Dcucumber.filter.tags="@addToCart"
 
 ---
 
-## 📊 Reporte de resultados
+## Reporte de resultados
 
 Después de ejecutar las pruebas, el reporte HTML se genera automáticamente en:
 ```
@@ -169,19 +169,19 @@ target/report.html
 
 ---
 
-## 🌐 Aplicación bajo prueba
+## Aplicación bajo prueba
 
 Las pruebas apuntan a: https://opencart.abstracta.us
 
 **Escenarios cubiertos:**
 
-- ✅ Login exitoso con credenciales válidas
-- ✅ Login fallido con credenciales inválidas o vacías
-- ✅ Agregar productos al carrito y modificar cantidades
-- ✅ Validación de totales y precios en el carrito
+- Login exitoso con credenciales válidas
+- Login fallido con credenciales inválidas o vacías
+- Agregar productos al carrito y modificar cantidades
+- Validación de totales y precios en el carrito
 
 ---
 
-## 📝 Notas
+## Notas
 
 El navegador se ejecuta en modo **visible** (`headless: false`) para facilitar la observación de las pruebas durante el desarrollo. Para CI/CD, cambiar a `headless: true` en `BrowserContext.java`.
