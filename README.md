@@ -4,7 +4,7 @@ Proyecto de automatización de pruebas funcionales construido con **Playwright**
 
 ---
 ## Flujos seleccionados para pruebas
-Login exitoso
+**`Login exitoso/`**
 Verificar que un usuario con credenciales válidas puede iniciar sesión correctamente es fundamental para el negocio porque garantiza que los clientes pueden acceder a la plataforma sin fricciones. Si este flujo falla, el usuario no puede comprar, gestionar su cuenta ni completar ninguna transacción — lo que se traduce directamente en pérdida de ventas y clientes. 
 
 Login fallido con control de errores
