@@ -3,6 +3,15 @@
 Proyecto de automatización de pruebas funcionales construido con **Playwright**, **Cucumber (Gherkin)** y **Java**, aplicando buenas prácticas de la industria como Page Object Model (POM), inyección de dependencias y reutilización de clases.
 
 ---
+## Flujos seleccionados para pruebas
+Login exitoso
+Verificar que un usuario con credenciales válidas puede iniciar sesión correctamente es fundamental para el negocio porque garantiza que los clientes pueden acceder a la plataforma sin fricciones. Si este flujo falla, el usuario no puede comprar, gestionar su cuenta ni completar ninguna transacción — lo que se traduce directamente en pérdida de ventas y clientes. 
+
+Login fallido con control de errores
+Probar que el sistema rechaza correctamente credenciales inválidas, vacías o con formato incorrecto es igual de crítico que probar el acceso exitoso. Desde el punto de vista del negocio, un sistema que no valida correctamente los errores de login expone la plataforma a riesgos de seguridad — como accesos no autorizados o ataques de fuerza bruta — y daña la confianza del usuario si no recibe mensajes claros cuando se equivoca. Además, un manejo deficiente de errores puede dejar al cliente atrapado sin saber qué hacer, aumentando la tasa de abandono y generando costos en soporte al cliente.
+
+Carrito de compras y confirmacion de calculo de valores
+El carrito de compras es el núcleo del proceso de venta en cualquier tienda en línea, por lo que garantizar que funcione correctamente es una prioridad de negocio. Si un producto no se agrega al carrito o la cantidad no se refleja bien, el cliente abandona la compra y busca una alternativa en la competencia, lo que se traduce en pérdida directa de ingresos. Igualmente crítica es la precisión en los cálculos de precios — un error en el precio unitario, en la multiplicación por cantidad o en el total del carrito puede resultar en cobros incorrectos al cliente, generando devoluciones, disputas y pérdida de confianza, o bien en pérdidas económicas para el negocio si se cobra de menos. Automatizar estas validaciones permite detectar cualquier regresión de forma inmediata cada vez que el sistema cambia, asegurando que el cliente siempre vea información veraz y que el flujo de compra funcione de extremo a extremo.
 
 ## Tecnologías utilizadas
 
