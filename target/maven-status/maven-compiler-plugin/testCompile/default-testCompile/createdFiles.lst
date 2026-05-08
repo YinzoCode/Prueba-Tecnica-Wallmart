@@ -1,8 +1,0 @@
-com\miprueba\steps\LoginSteps.class
-com\miprueba\pages\ShoppingCartPage.class
-com\miprueba\steps\BrowserContext.class
-com\miprueba\pages\LoginPage.class
-com\miprueba\runner\TestRunner.class
-com\miprueba\steps\Base.class
-com\miprueba\steps\ShoppingCartSteps.class
-com\miprueba\pages\HomePage.class
