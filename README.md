@@ -4,7 +4,7 @@ Proyecto de automatización de pruebas funcionales construido con **Playwright**
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## Tecnologías utilizadas
 
 | Herramienta | Versión | Propósito |
 |---|---|---|
